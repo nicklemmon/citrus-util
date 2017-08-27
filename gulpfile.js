@@ -3,6 +3,7 @@ const SASS = require( 'gulp-sass' );
 const SASS_GLOB = require( 'gulp-sass-glob' );
 const AUTOPREFIXER = require( 'gulp-autoprefixer' );
 const CONNECT = require( 'gulp-connect' );
+const RUN_SEQUENCE = require( 'run-sequence' );
 const CLEAN = require( 'gulp-clean' );
 
 GULP.task( 'styles', function() {
@@ -34,7 +35,11 @@ GULP.task( 'clean', function()  {
     .pipe( CLEAN() );
 });
 
-GULP.task( 'watch', [ 'clean', 'styles', 'markup' ], function() {
+GULP.task( 'build', [ 'clean' ], function() {
+  RUN_SEQUENCE( 'markup', 'styles' );
+});
+
+GULP.task( 'watch', [ 'build' ], function() {
   GULP.watch( './src/**/*.scss', [ 'styles' ] );
   GULP.watch( './src/**/*.html', [ 'markup' ] );
 });
