@@ -1,0 +1,20 @@
+$display-values-list:
+  inherit,
+  initial,
+  unset,
+  none,
+  block,
+  inline,
+  inline-block,
+  list-item,
+  flex,
+  inline-flex,
+  grid,
+  subgrid,
+  inline-grid,
+  table,
+  table-row,
+  table-cell,
+  contents;
+
+@include generate-selectors-from-list( display, $display-values-list );

@@ -1,0 +1,49 @@
+// flex-direction //
+$flex-direction-values-list:
+  row,
+  row-reverse,
+  column,
+  column-reverse;
+
+@include generate-selectors-from-list( flex-direction, $flex-direction-values-list );
+
+// flex-wrap //
+$flex-wrap-values-list:
+  nowrap,
+  wrap,
+  wrap-reverse;
+
+@include generate-selectors-from-list( flex-wrap, $flex-wrap-values-list );
+
+// justify-content //
+$justify-content-values-list:
+  flex-start,
+  flex-end,
+  center,
+  space-between,
+  space-around,
+  space-evenly;
+
+@include generate-selectors-from-list( justify-content, $justify-content-values-list );
+
+// align-items | align-self //
+$align-items-align-self-values-list:
+  flex-start,
+  flex-end,
+  center,
+  baseline,
+  stretch;
+
+@include generate-selectors-from-list( align-items, $align-items-align-self-values-list );
+@include generate-selectors-from-list( align-self, $align-items-align-self-values-list );
+
+// align-content //
+$align-content-values-list:
+  flex-start,
+  flex-end,
+  center,
+  space-between,
+  space-around,
+  stretch;
+
+@include generate-selectors-from-list( align-content, $align-content-values-list );

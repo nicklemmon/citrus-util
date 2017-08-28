@@ -1,0 +1,19 @@
+@mixin generate-selectors-from-list($property, $values-list) {
+  @each $value in $values-list {
+    .#{$property}\(#{$value}\) {
+      #{$property}: $value;
+
+      @each $size, $px in $breakpoints-map {
+        &.\@#{$size}-up {
+          @media screen and (min-width: #{$px}) {
+            #{$property}: $value;
+          }
+        }
+      }
+    }
+  }
+}
+
+// @mixin generate-selectors-from-map($map, $selector, $property) {
+//   // nothing yet!
+// }
