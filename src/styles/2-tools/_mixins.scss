@@ -14,6 +14,18 @@
   }
 }
 
-// @mixin generate-selectors-from-map($map, $selector, $property) {
-//   // nothing yet!
-// }
+@mixin generate-selectors-from-map($property, $values-map) {
+  @each $key, $value in $values-map {
+    .#{$property}\(#{$key}\) {
+      #{$property}: $value;
+
+      @each $size, $px in $breakpoints-map {
+        &.\@#{$size}-up {
+          @media screen and (min-width: #{$px}){
+            #{$property}: $value;
+          }
+        }
+      }
+    }
+  }
+}

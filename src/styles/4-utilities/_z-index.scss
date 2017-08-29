@@ -1,0 +1,14 @@
+$z-index-values-list:
+  -5,
+  -4,
+  -3,
+  -2,
+  -1,
+  0,
+  1,
+  2,
+  3,
+  4,
+  5;
+
+@include generate-selectors-from-list( z-index, $z-index-values-list );

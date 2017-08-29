@@ -1,0 +1,12 @@
+.screen-reader-only { // borrowed from: https://blog.rrwd.nl/2015/04/04/the-screen-reader-text-class-why-and-how/
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal;
+}

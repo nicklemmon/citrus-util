@@ -1,0 +1,6 @@
+$float-values-list:
+  right,
+  left,
+  none;
+
+@include generate-selectors-from-list( float, $float-value-list );
