@@ -1,4 +1,4 @@
-@mixin generate-selectors-from-list($property, $values-list) {
+@mixin generate-selectors-from-list( $property, $values-list ) {
   @each $value in $values-list {
     .#{$property}\(#{$value}\) {
       #{$property}: $value;
@@ -14,7 +14,7 @@
   }
 }
 
-@mixin generate-selectors-from-map($property, $values-map) {
+@mixin generate-selectors-from-map( $property, $values-map ) {
   @each $key, $value in $values-map {
     .#{$property}\(#{$key}\) {
       #{$property}: $value;
