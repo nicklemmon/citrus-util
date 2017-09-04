@@ -1,0 +1,5 @@
+@each $color-name, $hex-value in $colors-map  {
+  .color\(#{$color-name}\) {
+    color: $hex-value;
+  }
+}

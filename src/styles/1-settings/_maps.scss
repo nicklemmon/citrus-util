@@ -1,8 +1,35 @@
-// Based on: https://uiux.cc/blog/the-most-used-responsive-breakpoints-in-2017-of-mine/
+// Based on:
+// https://uiux.cc/blog/the-most-used-responsive-breakpoints-in-2017-of-mine/
 $breakpoints-map: (
   xs: 480px,
   sm: 736px,
   md: 980px,
   lg: 1280px,
   xl: 1690px
+);
+
+// To name colors, using:
+// http://chir.ag/projects/name-that-color/
+$colors-map: (
+  dark-gray:    #2C3E50,
+  medium-gray:  #566573,
+  light-gray:   #808B96,
+  dark-red:     #E74C3C,
+  medium-red:   #EC7063,
+  light-red:    #F1948A,
+  dark-blue:    #359EDB,
+  medium-blue:  #5DB2E2,
+  light-blue:   #86C5EA,
+  dark-green:   #35DBC8,
+  medium-green: #5DE2D3,
+  light-green:  #86EADE
+);
+
+$spacing-map: (
+  0:  0,
+  xs: 5px,
+  sm: 10px,
+  md: 20px,
+  lg: 40px,
+  xl: 80px
 );

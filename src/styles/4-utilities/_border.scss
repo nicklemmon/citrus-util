@@ -1,0 +1,41 @@
+$border-direction-list:
+  -top,
+  -right,
+  -bottom,
+  -left,
+  null;
+
+$border-width-values-list:
+  1px,
+  2px,
+  3px;
+
+$border-style-values-list:
+  solid,
+  dashed;
+
+
+// Generates a class, a la `.border-top(1px-solid-cinnabar)`
+@each $direction in $border-direction-list {
+  @each $width-value in $border-width-values-list {
+    @each $style-value in $border-style-values-list {
+      @each $color-name, $hex-value in $colors-map {
+        .border#{$direction}\(#{$width-value}-#{$style-value}-#{$color-name}\) {
+          border#{$direction}: $width-value $style-value $hex-value;
+        }
+      }
+    }
+  }
+}
+
+@each $direction in $border-direction-list {
+  .border#{$direction}\(0\) {
+    border#{$direction}: 0;
+  }
+}
+
+@each $color-name, $hex-value in $colors-map {
+  .border-color\(#{$color-name}\) {
+    border-color: $hex-value;
+  }
+}

@@ -1,0 +1,21 @@
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+$white-space-values-list:
+  nowrap,
+  pre,
+  normal,
+  pre-wrap,
+  pre-line;
+
+@include generate-selectors-from-list( white-space, $white-space-values-list );
+
+$word-break-values-list:
+  normal,
+  break-all,
+  keep-all;
+
+@include generate-selectors-from-list( word-break, $word-break-values-list );

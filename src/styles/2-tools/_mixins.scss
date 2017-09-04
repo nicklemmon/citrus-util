@@ -4,7 +4,7 @@
       #{$property}: $value;
 
       @each $size, $px in $breakpoints-map {
-        &.\@#{$size}-up {
+        &\@#{$size}-up {
           @media screen and (min-width: #{$px}) {
             #{$property}: $value;
           }
@@ -20,7 +20,7 @@
       #{$property}: $value;
 
       @each $size, $px in $breakpoints-map {
-        &.\@#{$size}-up {
+        &\@#{$size}-up {
           @media screen and (min-width: #{$px}){
             #{$property}: $value;
           }

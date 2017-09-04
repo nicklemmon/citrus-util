@@ -1,0 +1,6 @@
+$text-decoration-values-list:
+  none,
+  underline,
+  line-through;
+
+@include generate-selectors-from-list( text-decoration, $text-decoration-values-list );

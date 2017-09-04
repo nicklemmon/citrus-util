@@ -1,0 +1,40 @@
+$size-direction-list:
+  -top,
+  -right,
+  -bottom,
+  -left,
+  null;
+
+// Padding
+@each $size, $value in $spacing-map {
+  @each $direction in $size-direction-list {
+    .padding#{$direction}\(#{$size}\) {
+      padding#{$direction}: $value;
+
+      @each $size, $px in $breakpoints-map {
+        &\@#{$size}-up {
+          @media screen and (min-width: #{$px}){
+            padding#{$direction}: $value;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Margin
+@each $size, $value in $spacing-map {
+  @each $direction in $size-direction-list {
+    .margin#{$direction}\(#{$size}\) {
+      margin#{$direction}: $value;
+
+      @each $size, $px in $breakpoints-map {
+        &\@#{$size}-up {
+          @media screen and (min-width: #{$px}){
+            margin#{$direction}: $value;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+$border-radius-values-list:
+  0%,
+  50%,
+  100%;
+
+@include generate-selectors-from-list( border-radius, $border-radius-values-list );

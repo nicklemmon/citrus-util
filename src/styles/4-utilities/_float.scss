@@ -3,4 +3,4 @@ $float-values-list:
   left,
   none;
 
-@include generate-selectors-from-list( float, $float-value-list );
+@include generate-selectors-from-list( float, $float-values-list );
