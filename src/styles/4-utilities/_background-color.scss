@@ -2,4 +2,12 @@
   .background-color\(#{$color-name}\) {
     background-color: $hex-value;
   }
+
+  .background-color\(hover-#{$color-name}\) {
+    transition: background-color $base-duration $base-easing;
+
+    &:hover {
+      background-color: $hex-value;
+    }
+  }
 }

@@ -1,0 +1,12 @@
+$cursor-values-list:
+  none,
+  default,
+  pointer,
+  progress,
+  move,
+  not-allowed,
+  text,
+  col-resize,
+  row-resize;
+
+@include generate-selectors-from-list( cursor, $cursor-values-list );

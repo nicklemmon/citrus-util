@@ -2,4 +2,12 @@
   .color\(#{$color-name}\) {
     color: $hex-value;
   }
+
+  .color\(hover-#{$color-name}\) {
+    transition: color $base-duration $base-easing;
+
+    &:hover {
+      color: $hex-value;
+    }
+  }
 }
