@@ -1,0 +1,37 @@
+@each $size, $value in $spacing-map {
+  .grid-gap\(#{$size}\) {
+    grid-gap: $value;
+
+    @each $size, $px in $breakpoints-map {
+      &\@#{$size}-up {
+        @media screen and (min-width: #{$px}){
+          grid-gap: $value;
+        }
+      }
+    }
+  }
+
+  .grid-row-gap\(#{$size}\) {
+    grid-row-gap: $value;
+
+    @each $size, $px in $breakpoints-map {
+      &\@#{$size}-up {
+        @media screen and (min-width: #{$px}){
+          grid-row-gap: $value;
+        }
+      }
+    }
+  }
+
+  .grid-column-gap\(#{$size}\) {
+    grid-column-gap: $value;
+
+    @each $size, $px in $breakpoints-map {
+      &\@#{$size}-up {
+        @media screen and (min-width: #{$px}){
+          grid-column-gap: $value;
+        }
+      }
+    }
+  }
+}

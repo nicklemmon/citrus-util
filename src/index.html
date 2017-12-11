@@ -2,22 +2,24 @@
 
 <html lang="en">
   <head>
+    <title>Citrus CSS Utility Library</title>
+
     <link rel="stylesheet" href="styles/main.css">
   </head>
 
-  <body class="margin(0)">
-    <div class="background-color(medium-blue) padding(xl)">
-      <h1 class="display(block) color(white) font-size(xl)">Heading, here!</h1>
-    </div>
+  <body class="margin(0) font-family(base)">
+    <section class="display(grid) grid(3-col) margin(lg) box-shadow(base) color(white)">
+      <div class="background-color(dark-blue) padding(lg)">
+        Grid Item.
+      </div>
 
-    <div class="padding(xl)">
-      <p class="font-size(lg)">Test.</p>
+      <div class="background-color(dark-blue) padding(lg)">
+        Grid Item.
+      </div>
 
-      <button class="font-size(base) cursor(pointer) border(2px-solid-dark-red) padding(sm) padding-left(md) padding-right(md) background-color(medium-red) color(white) border-radius(6px) box-shadow(base) background-color(hover-dark-red)">Click Me</button>
-    </div>
-
-    <div class="padding(xl)@md-up background-color(light-blue)">
-      <p class="font-size(xl)">Extra Large!</p>
-    </div>
+      <div class="background-color(dark-blue) padding(lg)">
+        Grid Item.
+      </div>
+    </section>
   </body>
 </html>

@@ -1,0 +1,15 @@
+// NOTE: For use in conjunction with `.display(grid)`
+
+@for $i from 1 through $max-supported-columns {
+  .grid\(#{$i}-col\) {
+    grid-template-columns: repeat($i, 1fr);
+
+    @each $size, $px in $breakpoints-map {
+      &\@#{$size}-up {
+        @media screen and (min-width: #{$px}){
+          grid-template-columns: repeat($i, 1fr);
+        }
+      }
+    }
+  }
+}
