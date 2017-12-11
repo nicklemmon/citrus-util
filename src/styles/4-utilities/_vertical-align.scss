@@ -1,0 +1,12 @@
+$vertical-align-values-list:
+  baseline,
+  top,
+  bottom,
+  middle,
+  text-top,
+  text-bottom,
+  sub,
+  super,
+  length;
+
+@include generate-selectors-from-list( vertical-align, $vertical-align-values-list );
