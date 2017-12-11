@@ -1,8 +1,11 @@
 // Define project settings: //
 
 // Type
+$base-font-family: sans-serif !default;
+$alt-font-family: serif !default;
+$mono-font-family: monospace !default;
 $base-font-size: 16px !default;
 
 // Transitions
-$base-duration: 0.4s;
-$base-easing: ease-in-out;
+$base-duration: 0.4s !default;
+$base-easing: ease-in-out !default;
