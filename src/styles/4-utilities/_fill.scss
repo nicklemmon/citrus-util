@@ -1,0 +1,13 @@
+@each $color-name, $hex-value in $colors-map  {
+  .fill\(#{$color-name}\) {
+    fill: $hex-value;
+  }
+
+  .fill\(hover-#{$color-name}\) {
+    transition: background-color $base-duration $base-easing;
+
+    &:hover {
+      background-color: $hex-value;
+    }
+  }
+}
