@@ -1,6 +1,6 @@
 {
   "name": "citrus-util",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "CSS utility class library",
   "main": "gulpfile.js",
   "scripts": {
@@ -10,7 +10,9 @@
   "license": "MIT",
   "devDependencies": {
     "gulp-autoprefixer": "^4.0.0",
+    "gulp-bump": "^2.8.0",
     "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^3.9.0",
     "gulp-connect": "^5.0.0",
     "gulp-sass": "^3.1.0",
     "gulp-sass-glob": "^1.0.8",

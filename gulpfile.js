@@ -1,10 +1,12 @@
 const GULP = require( 'gulp' );
 const SASS = require( 'gulp-sass' );
 const SASS_GLOB = require( 'gulp-sass-glob' );
+const CLEAN_CSS = require( 'gulp-clean-css' );
 const AUTOPREFIXER = require( 'gulp-autoprefixer' );
 const CONNECT = require( 'gulp-connect' );
 const RUN_SEQUENCE = require( 'run-sequence' );
 const CLEAN = require( 'gulp-clean' );
+const BUMP = require( 'gulp-bump' );
 
 GULP.task( 'styles', function() {
   return GULP.src( './src/styles/citrus.scss' )
@@ -13,8 +15,24 @@ GULP.task( 'styles', function() {
     .pipe( AUTOPREFIXER( {
       browsers: [ 'last 2 versions' ]
     } ) )
-    .pipe( GULP.dest( './dist/styles' ) )
+    .pipe( GULP.dest( './build/styles' ) )
     .pipe( CONNECT.reload() );
+});
+
+GULP.task( 'publishStyles', function() {
+  return GULP.src( './src/styles/citrus.scss' )
+    .pipe( SASS_GLOB() )
+    .pipe( SASS() )
+    .pipe( AUTOPREFIXER( {
+      browsers: [ 'last 2 versions' ]
+    } ) )
+    .pipe( CLEAN_CSS() )
+    .pipe( GULP.dest( './dist/' ) )
+});
+
+GULP.task( 'release', function() {
+  return GULP.src( './package.json' )
+    .pipe( BUMP() )
 });
 
 GULP.task( 'server', function() {
@@ -45,3 +63,5 @@ GULP.task( 'watch', [ 'build' ], function() {
 });
 
 GULP.task( 'default', [ 'watch', 'server' ] );
+
+GULP.task( 'publish', [ 'publishStyles', 'release' ] );
