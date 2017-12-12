@@ -7,7 +7,7 @@ const RUN_SEQUENCE = require( 'run-sequence' );
 const CLEAN = require( 'gulp-clean' );
 
 GULP.task( 'styles', function() {
-  return GULP.src( './src/styles/main.scss' )
+  return GULP.src( './src/styles/citrus.scss' )
     .pipe( SASS_GLOB() )
     .pipe( SASS() )
     .pipe( AUTOPREFIXER( {
