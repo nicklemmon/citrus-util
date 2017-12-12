@@ -1,0 +1,11 @@
+$position-values-list:
+  inherit,
+  initial,
+  unset,
+  static,
+  relative,
+  absolute,
+  fixed,
+  sticky;
+
+@include generate-selectors-from-list( position, $position-values-list );
