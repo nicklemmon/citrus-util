@@ -37,19 +37,19 @@ GULP.task( 'release', function() {
 
 GULP.task( 'server', function() {
   CONNECT.server( {
-    root: 'dist',
+    root: 'build',
     livereload: true
   } )
 });
 
 GULP.task( 'markup', function() {
   return GULP.src( './src/index.html' )
-    .pipe( GULP.dest( './dist' ) )
+    .pipe( GULP.dest( './build' ) )
     .pipe( CONNECT.reload() );
 })
 
 GULP.task( 'clean', function()  {
-  return GULP.src( './dist/**/*' )
+  return GULP.src( './build/**/*' )
     .pipe( CLEAN() );
 });
 
