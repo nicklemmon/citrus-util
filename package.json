@@ -9,6 +9,7 @@
   "author": "Nick Lemmon",
   "license": "MIT",
   "devDependencies": {
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-bump": "^2.8.0",
     "gulp-clean": "^0.3.2",
