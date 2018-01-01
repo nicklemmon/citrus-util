@@ -1,0 +1,37 @@
+[class*='hover-color'] {
+  transition: color $base-duration $base-easing;
+}
+
+[class*='hover-background-color'] {
+  transition: background-color $base-duration $base-easing;
+}
+
+[class*='hover-transform'] {
+  transition: transform $base-duration $base-easing;
+}
+
+@each $color-name, $hex-value in $colors-map {
+  .hover-color\(#{$color-name}\):hover {
+    color: $hex-value;
+  }
+
+  .hover-background-color\(#{$color-name}\):hover {
+    background-color: $hex-value;
+  }
+}
+
+.hover-transform\(grow\):hover {
+  transform: scale(1.05);
+}
+
+.hover-transform\(shrink\):hover {
+  transform: scale(0.95);
+}
+
+.hover-transform\(slide-up\):hover {
+  transform: translateY(-#{map-get($spacing-map, sm)});
+}
+
+.hover-transform\(slide-down\):hover {
+  transform: translateY(map-get($spacing-map, sm));
+}
